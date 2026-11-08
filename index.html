@@ -1,0 +1,39 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wellness Daily shares practical, easy-to-understand health and wellness articles.">
+  <title>Wellness Daily | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+  <a class="brand" href="index.html"><span class="brand-mark">✚</span> Wellness<span>Daily</span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="mainNav"><a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+</div></header>
+<main>
+  <section class="hero"><div class="container hero-content">
+    <p class="eyebrow">SMALL STEPS. HEALTHIER DAYS.</p>
+    <h1>Understand your health.<br><span>Live a little better.</span></h1>
+    <p class="hero-copy">Friendly, practical reads on nutrition, fitness, sleep and everyday wellbeing.</p>
+    <a class="primary-link" href="#articles">Explore articles <span>→</span></a>
+  </div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div></section>
+
+  <section class="container articles-section" id="articles">
+    <div class="section-heading"><div><p class="eyebrow">THE WELLNESS LIBRARY</p><h2>Explore health articles</h2></div><span class="article-count" id="articleCount">6 articles</span></div>
+    <div class="toolbar">
+      <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search articles..." aria-label="Search articles"></label>
+      <select id="categoryFilter" aria-label="Filter by category"><option value="all">All categories</option><option>Nutrition</option><option>Fitness</option><option>Sleep</option><option>Mental Wellness</option><option>Prevention</option></select>
+    </div>
+    <div class="article-grid" id="articleGrid"></div><p class="empty-state" id="emptyState" hidden>No articles found. Try another search.</p>
+  </section>
+  <section class="newsletter"><div class="container newsletter-inner"><div><p class="eyebrow">A HEALTHIER INBOX</p><h2>Make room for better habits.</h2><p>Explore simple ideas you can put into practice, one step at a time.</p></div><a class="light-link" href="contact.html">Get in touch <span>→</span></a></div></section>
+</main>
+<footer><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark">✚</span> Wellness<span>Daily</span></a><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div><p>© <span id="year"></span> Wellness Daily. Educational content only.</p></div></footer>
+<script src="articles.js"></script><script src="main.js"></script>
+</body>
+</html>
+```
