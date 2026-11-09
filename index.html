@@ -37,8 +37,6 @@
       margin: 0 auto;
       max-width: 100%;
       overflow: hidden;
-      background: rgba(0, 0, 0, .025);
-      border-radius: 4px;
     }
 
     .ad-wrapper iframe {
@@ -77,32 +75,26 @@
       margin: 0;
     }
 
-    /* Slight separation from content so ads are clearly distinct from articles */
-    .article-grid {
-      margin-bottom: 8px;
-    }
-
     .smartlink-ad {
       text-align: center;
-      margin: 36px auto 16px;
+      margin: 36px auto 0;
     }
 
     .smartlink-button {
       display: inline-block;
       padding: 13px 26px;
-      background: #16845b;
+      background: #287b68;
       color: #fff;
       text-decoration: none;
-      border-radius: 7px;
+      border-radius: 8px;
       font-weight: 700;
       transition: background .2s ease;
     }
 
     .smartlink-button:hover {
-      background: #106b49;
+      background: #1f6556;
     }
 
-    /* ---------- RESPONSIVE ---------- */
     @media (max-width: 767px) {
       .ad-unit,
       .native-ad {
@@ -121,144 +113,176 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-    <div class="container">
-      <div class="logo">
-        <a href="/">Wellness Daily</a>
-      </div>
-
-      <nav>
-        <a href="/">Home</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">✚</span> Wellness<span>Daily</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <nav id="mainNav">
+        <a class="active" href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Your Daily Guide to Better Wellness</h1>
-      <p>
-        Discover practical health tips, wellness advice and helpful
-        lifestyle information for a healthier everyday life.
-      </p>
-    </div>
-  </section>
+  <main>
 
-  <!-- AD 1: 728x90 (below hero) -->
-  <div class="ad-unit" data-ad-width="728">
-    <span class="ad-label">Advertisement</span>
-    <div class="ad-wrapper" id="ad-728x90"></div>
-  </div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">HEALTH &amp; WELLNESS</p>
+        <h1>Your Daily Guide to <span>Better Wellness</span></h1>
+        <p class="hero-copy">
+          Discover practical health tips, wellness advice and helpful
+          lifestyle information for a healthier everyday life.
+        </p>
+      </div>
+      <div class="hero-orbit orbit-one"></div>
+      <div class="hero-orbit orbit-two"></div>
+    </section>
 
-  <!-- ARTICLES -->
-  <section class="container articles-section" id="articles">
-
-    <div class="section-heading">
-      <span>THE WELLNESS LIBRARY</span>
-      <h2>Explore Health Articles</h2>
-      <p>6 articles</p>
-    </div>
-
-    <!-- SEARCH -->
-    <div class="article-toolbar">
-      <input
-        type="search"
-        id="searchInput"
-        placeholder="Search articles..."
-        aria-label="Search articles"
-      >
-
-      <div class="category-filter" id="categoryFilter"></div>
-    </div>
-
-    <!-- AD 2: NATIVE BANNER (between toolbar and articles) -->
-    <div class="native-ad">
+    <!-- AD 1: 728x90 (below hero) -->
+    <div class="ad-unit">
       <span class="ad-label">Advertisement</span>
-
-      <div id="container-c0b646ed56723437822576284fc4cc71"></div>
-
-      <script async data-cfasync="false"
-        src="https://bicea.org/21/c0b646ed56723437822576284fc4cc71">
-      </script>
+      <div class="ad-wrapper" id="ad-728x90"></div>
     </div>
 
-    <!-- ARTICLE GRID -->
-    <div class="article-grid" id="articleGrid"></div>
+    <!-- ARTICLES -->
+    <section class="container articles-section" id="articles">
 
-    <div id="emptyState" style="display:none;">
-      <p>No articles found.</p>
-    </div>
-
-    <!-- AD 3: 300x250 (right after the articles) -->
-    <div class="ad-unit" data-ad-width="300">
-      <span class="ad-label">Advertisement</span>
-      <div class="ad-wrapper" id="ad-300x250"></div>
-    </div>
-
-    <!-- AD 4 AND AD 5: 160x300 + 160x600 side by side -->
-    <div class="banner-row">
-
-      <div class="ad-unit" data-ad-width="160">
-        <span class="ad-label">Advertisement</span>
-        <div class="ad-wrapper" id="ad-160x300"></div>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE WELLNESS LIBRARY</p>
+          <h2>Explore Health Articles</h2>
+        </div>
+        <span class="article-count" id="articleCount">6 articles</span>
       </div>
 
-      <div class="ad-unit" data-ad-width="160">
-        <span class="ad-label">Advertisement</span>
-        <div class="ad-wrapper" id="ad-160x600"></div>
+      <!-- SEARCH + CATEGORY FILTER -->
+      <div class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="searchInput" placeholder="Search articles..." aria-label="Search articles">
+        </label>
+
+        <select id="categoryFilter" aria-label="Filter by category">
+          <option value="all">All categories</option>
+        </select>
       </div>
 
-    </div>
+      <!-- AD 2: NATIVE BANNER -->
+      <div class="native-ad">
+        <span class="ad-label">Advertisement</span>
 
-    <!-- AD 6: 468x60 -->
-    <div class="ad-unit" data-ad-width="468">
-      <span class="ad-label">Advertisement</span>
-      <div class="ad-wrapper" id="ad-468x60"></div>
-    </div>
+        <div id="container-c0b646ed56723437822576284fc4cc71"></div>
 
-    <!-- AD 7: 320x50 -->
-    <div class="ad-unit" data-ad-width="320">
-      <span class="ad-label">Advertisement</span>
-      <div class="ad-wrapper" id="ad-320x50"></div>
-    </div>
+        <script async data-cfasync="false"
+          src="https://bicea.org/21/c0b646ed56723437822576284fc4cc71">
+        </script>
+      </div>
 
-    <!-- AD 8: SMARTLINK -->
-    <div class="smartlink-ad">
-      <span class="ad-label">Sponsored</span>
+      <!-- ARTICLE GRID -->
+      <div class="article-grid" id="articleGrid"></div>
 
-      <a
-        class="smartlink-button"
-        href="https://asiafilm.org/4/afd4360c35e7076ae9cb12c89a486fa7"
-        target="_blank"
-        rel="nofollow sponsored noopener"
-      >
-        Discover More
-      </a>
-    </div>
+      <div class="empty-state" id="emptyState" hidden>
+        <p>No articles found.</p>
+      </div>
 
-  </section>
+      <!-- AD 3: 300x250 -->
+      <div class="ad-unit">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-wrapper" id="ad-300x250"></div>
+      </div>
 
-  <!-- NEWSLETTER -->
-  <section class="newsletter">
-    <div class="container">
-      <h2>Stay Updated</h2>
-      <p>Explore more wellness tips and helpful articles.</p>
-    </div>
-  </section>
+      <!-- AD 4 AND AD 5: 160x300 + 160x600 side by side -->
+      <div class="banner-row">
+
+        <div class="ad-unit">
+          <span class="ad-label">Advertisement</span>
+          <div class="ad-wrapper" id="ad-160x300"></div>
+        </div>
+
+        <div class="ad-unit">
+          <span class="ad-label">Advertisement</span>
+          <div class="ad-wrapper" id="ad-160x600"></div>
+        </div>
+
+      </div>
+
+      <!-- AD 6: 468x60 -->
+      <div class="ad-unit">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-wrapper" id="ad-468x60"></div>
+      </div>
+
+      <!-- AD 7: 320x50 -->
+      <div class="ad-unit">
+        <span class="ad-label">Advertisement</span>
+        <div class="ad-wrapper" id="ad-320x50"></div>
+      </div>
+
+      <!-- AD 8: SMARTLINK -->
+      <div class="smartlink-ad">
+        <span class="ad-label">Sponsored</span>
+
+        <a
+          class="smartlink-button"
+          href="https://asiafilm.org/4/afd4360c35e7076ae9cb12c89a486fa7"
+          target="_blank"
+          rel="nofollow sponsored noopener"
+        >
+          Discover More
+        </a>
+      </div>
+
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <p class="eyebrow">STAY UPDATED</p>
+          <h2>More wellness tips, every day</h2>
+          <p>Explore more helpful articles from Wellness Daily.</p>
+        </div>
+        <a class="light-link" href="#articles">Browse articles</a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <p>&copy; 2026 Wellness Daily. All rights reserved.</p>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <div class="container footer-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">✚</span> Wellness<span>Daily</span></a>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p>© <span class="year"></span> Wellness Daily. Educational content only.</p>
     </div>
   </footer>
 
-  <!-- WEBSITE JAVASCRIPT (content first) -->
+  <!-- WEBSITE JAVASCRIPT -->
   <script src="articles.js"></script>
+
+  <!-- Fill the category dropdown from the articles list (main.js reads its value) -->
+  <script>
+    (function () {
+      var select = document.getElementById("categoryFilter");
+      if (!select || typeof articles === "undefined") return;
+      var seen = {};
+      articles.forEach(function (a) {
+        if (!a.category || seen[a.category]) return;
+        seen[a.category] = true;
+        var opt = document.createElement("option");
+        opt.value = a.category;
+        opt.textContent = a.category;
+        select.appendChild(opt);
+      });
+    })();
+  </script>
+
   <script src="main.js"></script>
 
   <!-- AD LOADER -->
@@ -336,8 +360,7 @@
       var unit = el.closest(".ad-unit");
 
       // Skip banners wider than the screen so they never overflow or get cut off
-      var available = viewportWidth() - 32;
-      if (ad.width > available) {
+      if (ad.width > viewportWidth() - 32) {
         if (unit) unit.classList.add("ad-skip");
         return;
       }
