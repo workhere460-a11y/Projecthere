@@ -4,41 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wellness Daily shares practical, easy-to-understand health and wellness articles.">
 
-  <title>Wellness Daily New One | Home</title>
+  <meta name="description" content="Wellness Daily provides helpful health, wellness, fitness and lifestyle articles.">
+
+  <title>Wellness Daily | Health & Wellness Articles</title>
+
   <link rel="stylesheet" href="style.css">
 
   <style>
     .ad-wrapper {
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin: 25px auto;
-      max-width: 100%;
-      overflow: hidden;
+      margin: 24px auto;
+      text-align: center;
+      overflow-x: auto;
     }
 
     .ad-unit {
+      margin: 20px auto;
       text-align: center;
       max-width: 100%;
     }
 
     .ad-label {
-      font-size: 11px;
+      display: block;
+      font-size: 10px;
       color: #888;
-      margin-bottom: 8px;
       letter-spacing: 1px;
+      margin-bottom: 7px;
     }
 
     .ad-unit iframe {
-      max-width: 100%;
+      border: 0;
+    }
+
+    .banner-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .native-ad {
       width: 100%;
+      max-width: 100%;
       margin: 25px auto;
       text-align: center;
     }
@@ -48,19 +60,24 @@
       margin: 25px auto;
     }
 
-    .smartlink-ad a {
+    .smartlink-button {
       display: inline-block;
-      padding: 12px 24px;
-      background: #247b68;
-      color: white;
+      padding: 13px 25px;
+      background: #16845b;
+      color: #fff;
       text-decoration: none;
       border-radius: 7px;
-      font-weight: 600;
+      font-weight: bold;
     }
 
-    @media(max-width: 600px) {
-      .ad-wrapper {
-        gap: 12px;
+    .smartlink-button:hover {
+      background: #106b49;
+    }
+
+    @media (max-width: 600px) {
+      .banner-row {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -68,248 +85,221 @@
 
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <span class="brand-mark">✚</span> Wellness<span>Daily</span>
-    </a>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="/">Wellness Daily</a>
+      </div>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
-
-    <nav id="mainNav">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="container hero-content">
-      <p class="eyebrow">SMALL STEPS. HEALTHIER DAYS.</p>
-
-      <h1>
-        Understand your health.
-        <br>
-        <span>Live a little better.</span>
-      </h1>
-
-      <p class="hero-copy">
-        Friendly, practical reads on nutrition, fitness, sleep and everyday wellbeing.
-      </p>
-
-      <a class="primary-link" href="#articles">
-        Explore articles <span>→</span>
-      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="hero-orbit orbit-one"></div>
-    <div class="hero-orbit orbit-two"></div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <h1>Your Daily Guide to Better Wellness</h1>
+      <p>
+        Discover practical health tips, wellness advice and helpful
+        lifestyle information for a healthier everyday life.
+      </p>
+    </div>
   </section>
 
-  <!-- 728x90 Advertisement -->
-  <div class="ad-wrapper">
-    <div class="ad-unit">
-      <div class="ad-label">ADVERTISEMENT</div>
+  <!-- AD 1: 728x90 -->
+  <div class="ad-unit">
+    <span class="ad-label">ADVERTISEMENT</span>
+    <div class="ad-wrapper" id="ad-728x90">
       <script>
         atOptions = {
-          'key': 'b7c06c94bbb98b8e9ea1f6a76e1367a6',
-          'format': 'iframe',
-          'height': 90,
-          'width': 728,
-          'params': {}
+          'key' : 'b7c06c94bbb98b8e9ea1f6a76e1367a6',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
         };
       </script>
       <script src="https://bicea.org/22/b7c06c94bbb98b8e9ea1f6a76e1367a6"></script>
     </div>
   </div>
 
+  <!-- ARTICLES SECTION -->
   <section class="container articles-section" id="articles">
 
     <div class="section-heading">
-      <div>
-        <p class="eyebrow">THE WELLNESS LIBRARY</p>
-        <h2>Explore health articles</h2>
-      </div>
-      <span class="article-count" id="articleCount">6 articles</span>
+      <span>THE WELLNESS LIBRARY</span>
+      <h2>Explore Health Articles</h2>
+      <p>6 articles</p>
     </div>
 
-    <!-- Native Banner -->
+    <!-- AD 2: NATIVE BANNER -->
     <div class="native-ad">
-      <div class="ad-label">ADVERTISEMENT</div>
+      <span class="ad-label">ADVERTISEMENT</span>
+
       <script async="async" data-cfasync="false"
-        src="https://bicea.org/21/c0b646ed56723437822576284fc4cc71"></script>
+        src="https://bicea.org/21/c0b646ed56723437822576284fc4cc71">
+      </script>
+
       <div id="container-c0b646ed56723437822576284fc4cc71"></div>
     </div>
 
-    <!-- 300x250 Advertisement -->
-    <div class="ad-wrapper">
-      <div class="ad-unit">
-        <div class="ad-label">ADVERTISEMENT</div>
+    <!-- AD 3: 300x250 -->
+    <div class="ad-unit">
+      <span class="ad-label">ADVERTISEMENT</span>
+      <div class="ad-wrapper" id="ad-300x250">
         <script>
           atOptions = {
-            'key': 'c405ce0415adb10d8e5d79edd9748469',
-            'format': 'iframe',
-            'height': 250,
-            'width': 300,
-            'params': {}
+            'key' : 'c405ce0415adb10d8e5d79edd9748469',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
           };
         </script>
         <script src="https://bicea.org/22/c405ce0415adb10d8e5d79edd9748469"></script>
       </div>
     </div>
 
-    <div class="toolbar">
-      <label class="search-box">
-        <span>⌕</span>
-        <input id="searchInput" type="search"
-          placeholder="Search articles..." aria-label="Search articles">
-      </label>
+    <!-- SEARCH AND CATEGORY -->
+    <div class="article-toolbar">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search articles..."
+        aria-label="Search articles"
+      >
 
-      <select id="categoryFilter" aria-label="Filter by category">
-        <option value="all">All categories</option>
-        <option>Nutrition</option>
-        <option>Fitness</option>
-        <option>Sleep</option>
-        <option>Mental Wellness</option>
-        <option>Prevention</option>
-      </select>
+      <div class="category-filter" id="categoryFilter"></div>
     </div>
 
+    <!-- ARTICLE GRID -->
     <div class="article-grid" id="articleGrid"></div>
 
-    <p class="empty-state" id="emptyState" hidden>
-      No articles found. Try another search.
-    </p>
-
-    <!-- 160x300 Advertisement -->
-    <div class="ad-wrapper">
-      <div class="ad-unit">
-        <div class="ad-label">ADVERTISEMENT</div>
-        <script>
-          atOptions = {
-            'key': '7d353950d51e065ab45b3d283171eac7',
-            'format': 'iframe',
-            'height': 300,
-            'width': 160,
-            'params': {}
-          };
-        </script>
-        <script src="https://bicea.org/22/7d353950d51e065ab45b3d283171eac7"></script>
-      </div>
-
-      <!-- 160x600 Advertisement -->
-      <div class="ad-unit">
-        <div class="ad-label">ADVERTISEMENT</div>
-        <script>
-          atOptions = {
-            'key': '92c5ccd256aec973141a367e87abbb4a',
-            'format': 'iframe',
-            'height': 600,
-            'width': 160,
-            'params': {}
-          };
-        </script>
-        <script src="https://bicea.org/22/92c5ccd256aec973141a367e87abbb4a"></script>
-      </div>
+    <div id="emptyState" style="display:none;">
+      <p>No articles found.</p>
     </div>
 
-    <!-- 320x50 Advertisement -->
-    <div class="ad-wrapper">
+    <!-- AD 4 AND AD 5: 160x300 + 160x600 -->
+    <div class="banner-row">
+
       <div class="ad-unit">
-        <div class="ad-label">ADVERTISEMENT</div>
+        <span class="ad-label">ADVERTISEMENT</span>
+        <div class="ad-wrapper" id="ad-160x300">
+          <script>
+            atOptions = {
+              'key' : '7d353950d51e065ab45b3d283171eac7',
+              'format' : 'iframe',
+              'height' : 300,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script src="https://bicea.org/22/7d353950d51e065ab45b3d283171eac7"></script>
+        </div>
+      </div>
+
+      <div class="ad-unit">
+        <span class="ad-label">ADVERTISEMENT</span>
+        <div class="ad-wrapper" id="ad-160x600">
+          <script>
+            atOptions = {
+              'key' : '92c5ccd256aec973141a367e87abbb4a',
+              'format' : 'iframe',
+              'height' : 600,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script src="https://bicea.org/22/92c5ccd256aec973141a367e87abbb4a"></script>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AD 6: 320x50 -->
+    <div class="ad-unit">
+      <span class="ad-label">ADVERTISEMENT</span>
+      <div class="ad-wrapper" id="ad-320x50">
         <script>
           atOptions = {
-            'key': 'c7a4fa94d8b097e723df04a22dc68063',
-            'format': 'iframe',
-            'height': 50,
-            'width': 320,
-            'params': {}
+            'key' : 'c7a4fa94d8b097e723df04a22dc68063',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
           };
         </script>
         <script src="https://bicea.org/22/c7a4fa94d8b097e723df04a22dc68063"></script>
       </div>
     </div>
 
-    <!-- 468x60 Advertisement -->
-    <div class="ad-wrapper">
-      <div class="ad-unit">
-        <div class="ad-label">ADVERTISEMENT</div>
+    <!-- AD 7: 468x60 -->
+    <div class="ad-unit">
+      <span class="ad-label">ADVERTISEMENT</span>
+      <div class="ad-wrapper" id="ad-468x60">
         <script>
           atOptions = {
-            'key': '5f518ca290978628977dced6c8a67260',
-            'format': 'iframe',
-            'height': 60,
-            'width': 468,
-            'params': {}
+            'key' : '5f518ca290978628977dced6c8a67260',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
           };
         </script>
         <script src="https://bicea.org/22/5f518ca290978628977dced6c8a67260"></script>
       </div>
     </div>
 
-    <!-- Smartlink -->
+    <!-- AD 8: SMARTLINK -->
     <div class="smartlink-ad">
-      <div class="ad-label">SPONSORED</div>
-      <a href="https://arwf.org/4/de169c512be0a17ed545c059468ed890"
-         target="_blank"
-         rel="nofollow sponsored noopener">
-        Explore More →
+      <span class="ad-label">SPONSORED</span>
+      <a
+        class="smartlink-button"
+        href="https://arwf.org/4/de169c512be0a17ed545c059468ed890"
+        target="_blank"
+        rel="nofollow sponsored noopener"
+      >
+        Discover More
       </a>
     </div>
 
   </section>
 
+  <!-- NEWSLETTER -->
   <section class="newsletter">
-    <div class="container newsletter-inner">
-      <div>
-        <p class="eyebrow">A HEALTHIER INBOX</p>
-        <h2>Make room for better habits.</h2>
-        <p>
-          Explore simple ideas you can put into practice, one step at a time.
-        </p>
-      </div>
-
-      <a class="light-link" href="contact.html">
-        Get in touch <span>→</span>
-      </a>
+    <div class="container">
+      <h2>Stay Updated</h2>
+      <p>Explore more wellness tips and helpful articles.</p>
     </div>
   </section>
 
-</main>
-
-<footer>
-  <div class="container footer-inner">
-
-    <a class="brand" href="index.html">
-      <span class="brand-mark">✚</span> Wellness<span>Daily</span>
-    </a>
-
-    <div class="footer-links">
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Wellness Daily. All rights reserved.</p>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
+  </footer>
 
-    <p>
-      © <span id="year"></span> Wellness Daily. Educational content only.
-    </p>
+  <!-- POPUNDER -->
+  <script data-cfasync="false"
+    src="https://afders.org/1/4a5603ebd92086a28ae7b30b4d7917ca">
+  </script>
 
-  </div>
-</footer>
+  <!-- SOCIAL BAR -->
+  <script data-cfasync="false"
+    src="https://bicea.org/14/a337f4bbbd2d9865f427116ffaba0290">
+  </script>
 
-<!-- Website JavaScript -->
-<script src="articles.js"></script>
-<script src="main.js"></script>
-
-<!-- Popunder -->
-<script data-cfasync="false"
-  src="https://afders.org/1/4a5603ebd92086a28ae7b30b4d7917ca"></script>
-
-<!-- SocialBar -->
-<script data-cfasync="false"
-  src="https://bicea.org/14/a337f4bbbd2d9865f427116ffaba0290"></script>
+  <!-- WEBSITE JAVASCRIPT -->
+  <script src="articles.js"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>
