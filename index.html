@@ -8,7 +8,6 @@
   <title>Wellness Daily | Home</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Ad placement styling -->
   <style>
     .ad-unit, .native-ad, .smartlink-ad {
       width: 100%;
@@ -25,20 +24,19 @@
       text-transform: uppercase;
     }
     .ad-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
       max-width: 100%;
       margin: 0 auto;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .ad-wrapper iframe { border: 0; max-width: 100%; }
-    #ad-728x90  { width: 728px; height: 90px; }
-    #ad-300x250 { width: 300px; height: 250px; }
-    #ad-160x300 { width: 160px; height: 300px; }
-    #ad-160x600 { width: 160px; height: 600px; }
-    #ad-320x50  { width: 320px; height: 50px; }
-    #ad-468x60  { width: 468px; height: 60px; }
+    .ad-wrapper iframe {
+      display: block;
+      max-width: 100%;
+      border: 0;
+    }
     .banner-row {
       display: flex;
       justify-content: center;
@@ -47,7 +45,11 @@
       gap: 24px;
       margin: 28px auto;
     }
-    .banner-row .ad-unit { width: auto; margin: 0; }
+    .banner-row .ad-unit {
+      width: auto;
+      max-width: 100%;
+      margin: 0;
+    }
     .smartlink-button {
       display: inline-block;
       padding: 12px 24px;
@@ -89,10 +91,21 @@
     <div class="hero-orbit orbit-two"></div>
   </section>
 
-  <!-- Ad 1: 728x90 banner -->
+  <!-- Adsterra 728x90 banner -->
   <div class="ad-unit">
     <span class="ad-label">Advertisement</span>
-    <div class="ad-wrapper" id="ad-728x90"></div>
+    <div class="ad-wrapper">
+      <script>
+        atOptions = {
+          'key' : 'b7c06c94bbb98b8e9ea1f6a76e1367a6',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://bicea.org/22/b7c06c94bbb98b8e9ea1f6a76e1367a6"></script>
+    </div>
   </div>
 
   <section class="container articles-section" id="articles">
@@ -119,52 +132,108 @@
       </select>
     </div>
 
-    <!-- Ad 2: Native banner -->
+    <!-- Adsterra Native Banner -->
     <div class="native-ad">
       <span class="ad-label">Advertisement</span>
-      <div id="container-c0b646ed56723437822576284fc4cc71"></div>
-      <script async data-cfasync="false"
+      <script async="async" data-cfasync="false"
         src="https://bicea.org/21/c0b646ed56723437822576284fc4cc71"></script>
+      <div id="container-c0b646ed56723437822576284fc4cc71"></div>
     </div>
 
     <div class="article-grid" id="articleGrid"></div>
     <p class="empty-state" id="emptyState" hidden>No articles found. Try another search.</p>
 
-    <!-- Ad 3: 300x250 banner -->
+    <!-- Adsterra 300x250 banner -->
     <div class="ad-unit">
       <span class="ad-label">Advertisement</span>
-      <div class="ad-wrapper" id="ad-300x250"></div>
+      <div class="ad-wrapper">
+        <script>
+          atOptions = {
+            'key' : 'c405ce0415adb10d8e5d79edd9748469',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script src="https://bicea.org/22/c405ce0415adb10d8e5d79edd9748469"></script>
+      </div>
     </div>
 
-    <!-- Ads 4 and 5: 160x300 and 160x600 banners -->
+    <!-- Adsterra 160x300 and 160x600 banners -->
     <div class="banner-row">
       <div class="ad-unit">
         <span class="ad-label">Advertisement</span>
-        <div class="ad-wrapper" id="ad-160x300"></div>
+        <div class="ad-wrapper">
+          <script>
+            atOptions = {
+              'key' : '7d353950d51e065ab45b3d283171eac7',
+              'format' : 'iframe',
+              'height' : 300,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script src="https://bicea.org/22/7d353950d51e065ab45b3d283171eac7"></script>
+        </div>
       </div>
+
       <div class="ad-unit">
         <span class="ad-label">Advertisement</span>
-        <div class="ad-wrapper" id="ad-160x600"></div>
+        <div class="ad-wrapper">
+          <script>
+            atOptions = {
+              'key' : '92c5ccd256aec973141a367e87abbb4a',
+              'format' : 'iframe',
+              'height' : 600,
+              'width' : 160,
+              'params' : {}
+            };
+          </script>
+          <script src="https://bicea.org/22/92c5ccd256aec973141a367e87abbb4a"></script>
+        </div>
       </div>
     </div>
 
-    <!-- Ad 6: 468x60 banner -->
+    <!-- Adsterra 468x60 banner -->
     <div class="ad-unit">
       <span class="ad-label">Advertisement</span>
-      <div class="ad-wrapper" id="ad-468x60"></div>
+      <div class="ad-wrapper">
+        <script>
+          atOptions = {
+            'key' : '5f518ca290978628977dced6c8a67260',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+          };
+        </script>
+        <script src="https://bicea.org/22/5f518ca290978628977dced6c8a67260"></script>
+      </div>
     </div>
 
-    <!-- Ad 7: 320x50 banner -->
+    <!-- Adsterra 320x50 banner -->
     <div class="ad-unit">
       <span class="ad-label">Advertisement</span>
-      <div class="ad-wrapper" id="ad-320x50"></div>
+      <div class="ad-wrapper">
+        <script>
+          atOptions = {
+            'key' : 'c7a4fa94d8b097e723df04a22dc68063',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        </script>
+        <script src="https://bicea.org/22/c7a4fa94d8b097e723df04a22dc68063"></script>
+      </div>
     </div>
 
-    <!-- Ad 8: Smartlink -->
+    <!-- Adsterra Smartlink -->
     <div class="smartlink-ad">
       <span class="ad-label">Sponsored</span>
       <a class="smartlink-button"
-         href="https://asiafilm.org/4/afd4360c35e7076ae9cb12c89a486fa7"
+         href="https://arwf.org/4/de169c512be0a17ed545c059468ed890"
          target="_blank" rel="nofollow sponsored noopener">
         Discover More →
       </a>
@@ -197,134 +266,10 @@
 <script src="articles.js"></script>
 <script src="main.js"></script>
 
-<!-- Adsterra banner loader: loads each banner when it approaches the viewport -->
-<script>
-(function () {
-  var ads = [
-    { id: "ad-728x90",  key: "b7c06c94bbb98b8e9ea1f6a76e1367a6", width: 728, height: 90 },
-    { id: "ad-300x250", key: "c405ce0415adb10d8e5d79edd9748469", width: 300, height: 250 },
-    { id: "ad-160x300", key: "7d353950d51e065ab45b3d283171eac7", width: 160, height: 300 },
-    { id: "ad-160x600", key: "92c5ccd256aec973141a367e87abbb4a", width: 160, height: 600 },
-    { id: "ad-320x50",  key: "c7a4fa94d8b097e723df04a22dc68063", width: 320, height: 50 },
-    { id: "ad-468x60",  key: "5f518ca290978628977dced6c8a67260", width: 468, height: 60 }
-  ];
+<!-- Adsterra Popunder -->
+<script data-cfasync="false" src="https://afders.org/1/4a5603ebd92086a28ae7b30b4d7917ca"></script>
 
-  var queue = [];
-  var busy = false;
-
-  function loadNext() {
-    if (busy || !queue.length) return;
-
-    var ad = queue.shift();
-    var container = document.getElementById(ad.id);
-    if (!container) {
-      loadNext();
-      return;
-    }
-
-    busy = true;
-    window.atOptions = {
-      key: ad.key,
-      format: "iframe",
-      height: ad.height,
-      width: ad.width,
-      params: {}
-    };
-
-    var finished = false;
-    function finish() {
-      if (finished) return;
-      finished = true;
-      busy = false;
-      loadNext();
-    }
-
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://bicea.org/22/" + ad.key;
-    script.onload = finish;
-    script.onerror = finish;
-    container.appendChild(script);
-    window.setTimeout(finish, 6000);
-  }
-
-  function startAds() {
-    var viewportWidth = document.documentElement.clientWidth || window.innerWidth;
-    var eligible = [];
-
-    ads.forEach(function (ad) {
-      var container = document.getElementById(ad.id);
-      if (!container) return;
-
-      if (ad.width > viewportWidth - 24) {
-        var unit = container.closest(".ad-unit");
-        if (unit) unit.style.display = "none";
-        return;
-      }
-
-      ad.element = container.closest(".ad-unit") || container;
-      eligible.push(ad);
-    });
-
-    function enqueue(ad) {
-      if (ad.queued) return;
-      ad.queued = true;
-      queue.push(ad);
-      loadNext();
-    }
-
-    if ("IntersectionObserver" in window) {
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          observer.unobserve(entry.target);
-          var ad = eligible.find(function (item) {
-            return item.element === entry.target;
-          });
-          if (ad) enqueue(ad);
-        });
-      }, { rootMargin: "350px 0px" });
-
-      eligible.forEach(function (ad) {
-        observer.observe(ad.element);
-      });
-    } else {
-      eligible.forEach(enqueue);
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", startAds);
-  } else {
-    startAds();
-  }
-})();
-</script>
-
-<!-- Ad 9: Popunder and Ad 10: Social Bar -->
-<script>
-(function () {
-  function loadOverlayScript(src) {
-    var script = document.createElement("script");
-    script.async = true;
-    script.setAttribute("data-cfasync", "false");
-    script.src = src;
-    document.body.appendChild(script);
-  }
-
-  function startOverlayAds() {
-    loadOverlayScript("https://afders.org/1/4a5603ebd92086a28ae7b30b4d7917ca");
-    loadOverlayScript("https://bicea.org/14/a337f4bbbd2d9865f427116ffaba0290");
-  }
-
-  if (document.readyState === "complete") {
-    window.setTimeout(startOverlayAds, 1500);
-  } else {
-    window.addEventListener("load", function () {
-      window.setTimeout(startOverlayAds, 1500);
-    }, { once: true });
-  }
-})();
-</script>
+<!-- Adsterra Social Bar -->
+<script data-cfasync="false" src="https://bicea.org/14/a337f4bbbd2d9865f427116ffaba0290"></script>
 </body>
 </html>
