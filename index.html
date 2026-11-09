@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +12,12 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+    /* ---------- AD SLOTS ---------- */
     .ad-unit {
       width: 100%;
-      margin: 25px auto;
+      margin: 32px auto;
       text-align: center;
+      clear: both;
     }
 
     .ad-label {
@@ -24,17 +25,20 @@
       font-size: 10px;
       color: #888;
       letter-spacing: 1px;
+      text-transform: uppercase;
       margin-bottom: 8px;
     }
 
+    /* Each slot reserves its exact size up front so the page doesn't jump when the ad loads */
     .ad-wrapper {
-      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 10px auto;
-      overflow-x: auto;
-      min-height: 0;
+      margin: 0 auto;
+      max-width: 100%;
+      overflow: hidden;
+      background: rgba(0, 0, 0, .025);
+      border-radius: 4px;
     }
 
     .ad-wrapper iframe {
@@ -42,24 +46,45 @@
       max-width: 100%;
     }
 
+    #ad-728x90  { width: 728px; height: 90px;  }
+    #ad-300x250 { width: 300px; height: 250px; }
+    #ad-160x300 { width: 160px; height: 300px; }
+    #ad-160x600 { width: 160px; height: 600px; }
+    #ad-320x50  { width: 320px; height: 50px;  }
+    #ad-468x60  { width: 468px; height: 60px;  }
+
+    /* Slots that are too wide for the screen are collapsed (see script) */
+    .ad-unit.ad-skip { display: none; }
+
     .native-ad {
       width: 100%;
-      margin: 25px auto;
+      margin: 32px auto;
       text-align: center;
+      min-height: 120px;
     }
 
     .banner-row {
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      gap: 20px;
+      gap: 24px;
       flex-wrap: wrap;
-      margin: 25px auto;
+      margin: 32px auto;
+    }
+
+    .banner-row .ad-unit {
+      width: auto;
+      margin: 0;
+    }
+
+    /* Slight separation from content so ads are clearly distinct from articles */
+    .article-grid {
+      margin-bottom: 8px;
     }
 
     .smartlink-ad {
       text-align: center;
-      margin: 30px auto;
+      margin: 36px auto 16px;
     }
 
     .smartlink-button {
@@ -77,14 +102,17 @@
       background: #106b49;
     }
 
-    @media (max-width: 600px) {
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 767px) {
+      .ad-unit,
+      .native-ad {
+        margin: 24px auto;
+      }
+
       .banner-row {
         flex-direction: column;
         align-items: center;
-      }
-
-      .ad-wrapper {
-        max-width: 100%;
+        gap: 24px;
       }
     }
   </style>
@@ -118,9 +146,9 @@
     </div>
   </section>
 
-  <!-- AD 1: 728x90 -->
-  <div class="ad-unit">
-    <span class="ad-label">ADVERTISEMENT</span>
+  <!-- AD 1: 728x90 (below hero) -->
+  <div class="ad-unit" data-ad-width="728">
+    <span class="ad-label">Advertisement</span>
     <div class="ad-wrapper" id="ad-728x90"></div>
   </div>
 
@@ -131,23 +159,6 @@
       <span>THE WELLNESS LIBRARY</span>
       <h2>Explore Health Articles</h2>
       <p>6 articles</p>
-    </div>
-
-    <!-- AD 2: NATIVE BANNER -->
-    <div class="native-ad">
-      <span class="ad-label">ADVERTISEMENT</span>
-
-      <div id="container-c0b646ed56723437822576284fc4cc71"></div>
-
-      <script async data-cfasync="false"
-        src="https://bicea.org/21/c0b646ed56723437822576284fc4cc71">
-      </script>
-    </div>
-
-    <!-- AD 3: 300x250 -->
-    <div class="ad-unit">
-      <span class="ad-label">ADVERTISEMENT</span>
-      <div class="ad-wrapper" id="ad-300x250"></div>
     </div>
 
     <!-- SEARCH -->
@@ -162,6 +173,17 @@
       <div class="category-filter" id="categoryFilter"></div>
     </div>
 
+    <!-- AD 2: NATIVE BANNER (between toolbar and articles) -->
+    <div class="native-ad">
+      <span class="ad-label">Advertisement</span>
+
+      <div id="container-c0b646ed56723437822576284fc4cc71"></div>
+
+      <script async data-cfasync="false"
+        src="https://bicea.org/21/c0b646ed56723437822576284fc4cc71">
+      </script>
+    </div>
+
     <!-- ARTICLE GRID -->
     <div class="article-grid" id="articleGrid"></div>
 
@@ -169,36 +191,42 @@
       <p>No articles found.</p>
     </div>
 
-    <!-- AD 4 AND AD 5 -->
+    <!-- AD 3: 300x250 (right after the articles) -->
+    <div class="ad-unit" data-ad-width="300">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-wrapper" id="ad-300x250"></div>
+    </div>
+
+    <!-- AD 4 AND AD 5: 160x300 + 160x600 side by side -->
     <div class="banner-row">
 
-      <div class="ad-unit">
-        <span class="ad-label">ADVERTISEMENT</span>
+      <div class="ad-unit" data-ad-width="160">
+        <span class="ad-label">Advertisement</span>
         <div class="ad-wrapper" id="ad-160x300"></div>
       </div>
 
-      <div class="ad-unit">
-        <span class="ad-label">ADVERTISEMENT</span>
+      <div class="ad-unit" data-ad-width="160">
+        <span class="ad-label">Advertisement</span>
         <div class="ad-wrapper" id="ad-160x600"></div>
       </div>
 
     </div>
 
-    <!-- AD 6: 320x50 -->
-    <div class="ad-unit">
-      <span class="ad-label">ADVERTISEMENT</span>
-      <div class="ad-wrapper" id="ad-320x50"></div>
+    <!-- AD 6: 468x60 -->
+    <div class="ad-unit" data-ad-width="468">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-wrapper" id="ad-468x60"></div>
     </div>
 
-    <!-- AD 7: 468x60 -->
-    <div class="ad-unit">
-      <span class="ad-label">ADVERTISEMENT</span>
-      <div class="ad-wrapper" id="ad-468x60"></div>
+    <!-- AD 7: 320x50 -->
+    <div class="ad-unit" data-ad-width="320">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-wrapper" id="ad-320x50"></div>
     </div>
 
     <!-- AD 8: SMARTLINK -->
     <div class="smartlink-ad">
-      <span class="ad-label">SPONSORED</span>
+      <span class="ad-label">Sponsored</span>
 
       <a
         class="smartlink-button"
@@ -229,76 +257,40 @@
     </div>
   </footer>
 
-  <!-- AD 9: POPUNDER -->
-  <script data-cfasync="false"
-    src="https://afders.org/1/4a5603ebd92086a28ae7b30b4d7917ca">
-  </script>
+  <!-- WEBSITE JAVASCRIPT (content first) -->
+  <script src="articles.js"></script>
+  <script src="main.js"></script>
 
-  <!-- AD 10: SOCIAL BAR -->
-  <script data-cfasync="false"
-    src="https://bicea.org/14/a337f4bbbd2d9865f427116ffaba0290">
-  </script>
-
-  <!-- BANNER ADS: SEQUENTIAL LOADER -->
+  <!-- AD LOADER -->
   <script>
   (function () {
 
+    /* ---- Banner ads: loaded one at a time, only when scrolled near ---- */
     var ads = [
-      {
-        id: "ad-728x90",
-        key: "b7c06c94bbb98b8e9ea1f6a76e1367a6",
-        width: 728,
-        height: 90
-      },
-      {
-        id: "ad-300x250",
-        key: "c405ce0415adb10d8e5d79edd9748469",
-        width: 300,
-        height: 250
-      },
-      {
-        id: "ad-160x300",
-        key: "7d353950d51e065ab45b3d283171eac7",
-        width: 160,
-        height: 300
-      },
-      {
-        id: "ad-160x600",
-        key: "92c5ccd256aec973141a367e87abbb4a",
-        width: 160,
-        height: 600
-      },
-      {
-        id: "ad-320x50",
-        key: "c7a4fa94d8b097e723df04a22dc68063",
-        width: 320,
-        height: 50
-      },
-      {
-        id: "ad-468x60",
-        key: "5f518ca290978628977dced6c8a67260",
-        width: 468,
-        height: 60
-      }
+      { id: "ad-728x90",  key: "b7c06c94bbb98b8e9ea1f6a76e1367a6", width: 728, height: 90  },
+      { id: "ad-300x250", key: "c405ce0415adb10d8e5d79edd9748469", width: 300, height: 250 },
+      { id: "ad-160x300", key: "7d353950d51e065ab45b3d283171eac7", width: 160, height: 300 },
+      { id: "ad-160x600", key: "92c5ccd256aec973141a367e87abbb4a", width: 160, height: 600 },
+      { id: "ad-320x50",  key: "c7a4fa94d8b097e723df04a22dc68063", width: 320, height: 50  },
+      { id: "ad-468x60",  key: "5f518ca290978628977dced6c8a67260", width: 468, height: 60  }
     ];
 
-    var current = 0;
+    var queue = [];
+    var busy = false;
 
-    function loadNextAd() {
+    function viewportWidth() {
+      return document.documentElement.clientWidth || window.innerWidth;
+    }
 
-      if (current >= ads.length) {
-        return;
-      }
+    // atOptions is a global, so only one banner script may run at a time.
+    function next() {
+      if (busy || !queue.length) return;
 
-      var ad = ads[current];
-      current++;
-
+      var ad = queue.shift();
       var container = document.getElementById(ad.id);
+      if (!container) { next(); return; }
 
-      if (!container) {
-        loadNextAd();
-        return;
-      }
+      busy = true;
 
       window.atOptions = {
         key: ad.key,
@@ -308,33 +300,92 @@
         params: {}
       };
 
-      var script = document.createElement("script");
+      var done = false;
+      function finish() {
+        if (done) return;
+        done = true;
+        busy = false;
+        next();
+      }
 
-      script.type = "text/javascript";
-      script.src = "https://bicea.org/22/" + ad.key;
-
-      // Load one banner script at a time.
-      script.onload = function () {
-        loadNextAd();
-      };
-
-      script.onerror = function () {
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.src = "https://bicea.org/22/" + ad.key;
+      s.onload = finish;
+      s.onerror = function () {
         console.error("Ad failed to load:", ad.key);
-        loadNextAd();
+        finish();
       };
 
-      container.appendChild(script);
+      container.appendChild(s);
+
+      // Safety net so one slow ad never blocks the rest
+      setTimeout(finish, 4000);
     }
 
-    loadNextAd();
+    function enqueue(ad) {
+      if (ad.queued) return;
+      ad.queued = true;
+      queue.push(ad);
+      next();
+    }
+
+    ads.forEach(function (ad) {
+      var el = document.getElementById(ad.id);
+      if (!el) return;
+      var unit = el.closest(".ad-unit");
+
+      // Skip banners wider than the screen so they never overflow or get cut off
+      var available = viewportWidth() - 32;
+      if (ad.width > available) {
+        if (unit) unit.classList.add("ad-skip");
+        return;
+      }
+
+      ad.el = unit || el;
+    });
+
+    var live = ads.filter(function (a) { return a.el; });
+
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          io.unobserve(entry.target);
+          var ad = live.find(function (a) { return a.el === entry.target; });
+          if (ad) enqueue(ad);
+        });
+      }, { rootMargin: "400px 0px" });
+
+      live.forEach(function (ad) { io.observe(ad.el); });
+    } else {
+      live.forEach(enqueue);
+    }
+
+    /* ---- Popunder + social bar: load after the page is ready ---- */
+    function addScript(src) {
+      var s = document.createElement("script");
+      s.setAttribute("data-cfasync", "false");
+      s.async = true;
+      s.src = src;
+      document.body.appendChild(s);
+    }
+
+    function loadOverlayAds() {
+      addScript("https://afders.org/1/4a5603ebd92086a28ae7b30b4d7917ca");   // AD 9: popunder
+      addScript("https://bicea.org/14/a337f4bbbd2d9865f427116ffaba0290");   // AD 10: social bar
+    }
+
+    if (document.readyState === "complete") {
+      setTimeout(loadOverlayAds, 1500);
+    } else {
+      window.addEventListener("load", function () {
+        setTimeout(loadOverlayAds, 1500);
+      });
+    }
 
   })();
   </script>
 
-  <!-- WEBSITE JAVASCRIPT -->
-  <script src="articles.js"></script>
-  <script src="main.js"></script>
-
 </body>
 </html>
-```
