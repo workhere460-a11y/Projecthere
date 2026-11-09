@@ -7,25 +7,16 @@
 
   <meta name="description" content="Wellness Daily provides helpful health, wellness, fitness and lifestyle articles.">
 
+  <meta name="theme-color" content="#ffffff">
   <title>Wellness Daily | Health & Wellness Articles</title>
 
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .ad-wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 24px auto;
-      text-align: center;
-      overflow-x: auto;
-    }
-
     .ad-unit {
-      margin: 20px auto;
+      width: 100%;
+      margin: 25px auto;
       text-align: center;
-      max-width: 100%;
     }
 
     .ad-label {
@@ -33,11 +24,22 @@
       font-size: 10px;
       color: #888;
       letter-spacing: 1px;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
     }
 
-    .ad-unit iframe {
-      border: 0;
+    .ad-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px auto;
+      overflow-x: auto;
+    }
+
+    .native-ad {
+      width: 100%;
+      margin: 25px auto;
+      text-align: center;
     }
 
     .banner-row {
@@ -46,38 +48,41 @@
       align-items: flex-start;
       gap: 20px;
       flex-wrap: wrap;
-    }
-
-    .native-ad {
-      width: 100%;
-      max-width: 100%;
       margin: 25px auto;
-      text-align: center;
     }
 
     .smartlink-ad {
       text-align: center;
-      margin: 25px auto;
+      margin: 30px auto;
     }
 
     .smartlink-button {
       display: inline-block;
-      padding: 13px 25px;
+      padding: 13px 26px;
       background: #16845b;
       color: #fff;
       text-decoration: none;
       border-radius: 7px;
-      font-weight: bold;
+      font-weight: 700;
+      transition: background .2s ease;
     }
 
     .smartlink-button:hover {
       background: #106b49;
     }
 
+    .ad-wrapper iframe {
+      border: 0;
+    }
+
     @media (max-width: 600px) {
       .banner-row {
         flex-direction: column;
         align-items: center;
+      }
+
+      .ad-wrapper {
+        max-width: 100%;
       }
     }
   </style>
@@ -100,7 +105,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <h1>Your Daily Guide to Better Wellness</h1>
@@ -117,18 +122,18 @@
     <div class="ad-wrapper" id="ad-728x90">
       <script>
         atOptions = {
-          'key' : 'b7c06c94bbb98b8e9ea1f6a76e1367a6',
-          'format' : 'iframe',
-          'height' : 90,
-          'width' : 728,
-          'params' : {}
+          'key': 'b7c06c94bbb98b8e9ea1f6a76e1367a6',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
         };
       </script>
       <script src="https://bicea.org/22/b7c06c94bbb98b8e9ea1f6a76e1367a6"></script>
     </div>
   </div>
 
-  <!-- ARTICLES SECTION -->
+  <!-- ARTICLES -->
   <section class="container articles-section" id="articles">
 
     <div class="section-heading">
@@ -154,18 +159,18 @@
       <div class="ad-wrapper" id="ad-300x250">
         <script>
           atOptions = {
-            'key' : 'c405ce0415adb10d8e5d79edd9748469',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
+            'key': 'c405ce0415adb10d8e5d79edd9748469',
+            'format': 'iframe',
+            'height': 250,
+            'width': 300,
+            'params': {}
           };
         </script>
         <script src="https://bicea.org/22/c405ce0415adb10d8e5d79edd9748469"></script>
       </div>
     </div>
 
-    <!-- SEARCH AND CATEGORY -->
+    <!-- SEARCH -->
     <div class="article-toolbar">
       <input
         type="search"
@@ -184,7 +189,7 @@
       <p>No articles found.</p>
     </div>
 
-    <!-- AD 4 AND AD 5: 160x300 + 160x600 -->
+    <!-- AD 4: 160x300 AND AD 5: 160x600 -->
     <div class="banner-row">
 
       <div class="ad-unit">
@@ -192,11 +197,11 @@
         <div class="ad-wrapper" id="ad-160x300">
           <script>
             atOptions = {
-              'key' : '7d353950d51e065ab45b3d283171eac7',
-              'format' : 'iframe',
-              'height' : 300,
-              'width' : 160,
-              'params' : {}
+              'key': '7d353950d51e065ab45b3d283171eac7',
+              'format': 'iframe',
+              'height': 300,
+              'width': 160,
+              'params': {}
             };
           </script>
           <script src="https://bicea.org/22/7d353950d51e065ab45b3d283171eac7"></script>
@@ -208,11 +213,11 @@
         <div class="ad-wrapper" id="ad-160x600">
           <script>
             atOptions = {
-              'key' : '92c5ccd256aec973141a367e87abbb4a',
-              'format' : 'iframe',
-              'height' : 600,
-              'width' : 160,
-              'params' : {}
+              'key': '92c5ccd256aec973141a367e87abbb4a',
+              'format': 'iframe',
+              'height': 600,
+              'width': 160,
+              'params': {}
             };
           </script>
           <script src="https://bicea.org/22/92c5ccd256aec973141a367e87abbb4a"></script>
@@ -227,11 +232,11 @@
       <div class="ad-wrapper" id="ad-320x50">
         <script>
           atOptions = {
-            'key' : 'c7a4fa94d8b097e723df04a22dc68063',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
+            'key': 'c7a4fa94d8b097e723df04a22dc68063',
+            'format': 'iframe',
+            'height': 50,
+            'width': 320,
+            'params': {}
           };
         </script>
         <script src="https://bicea.org/22/c7a4fa94d8b097e723df04a22dc68063"></script>
@@ -244,11 +249,11 @@
       <div class="ad-wrapper" id="ad-468x60">
         <script>
           atOptions = {
-            'key' : '5f518ca290978628977dced6c8a67260',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
+            'key': '5f518ca290978628977dced6c8a67260',
+            'format': 'iframe',
+            'height': 60,
+            'width': 468,
+            'params': {}
           };
         </script>
         <script src="https://bicea.org/22/5f518ca290978628977dced6c8a67260"></script>
@@ -258,9 +263,10 @@
     <!-- AD 8: SMARTLINK -->
     <div class="smartlink-ad">
       <span class="ad-label">SPONSORED</span>
+
       <a
         class="smartlink-button"
-        href="https://arwf.org/4/de169c512be0a17ed545c059468ed890"
+        href="https://asiafilm.org/4/afd4360c35e7076ae9cb12c89a486fa7"
         target="_blank"
         rel="nofollow sponsored noopener"
       >
@@ -287,12 +293,12 @@
     </div>
   </footer>
 
-  <!-- POPUNDER -->
+  <!-- AD 9: POPUNDER -->
   <script data-cfasync="false"
     src="https://afders.org/1/4a5603ebd92086a28ae7b30b4d7917ca">
   </script>
 
-  <!-- SOCIAL BAR -->
+  <!-- AD 10: SOCIAL BAR -->
   <script data-cfasync="false"
     src="https://bicea.org/14/a337f4bbbd2d9865f427116ffaba0290">
   </script>
