@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="description" content="Wellness Daily provides helpful health, wellness, fitness and lifestyle articles.">
-
   <meta name="theme-color" content="#ffffff">
+
   <title>Wellness Daily | Health & Wellness Articles</title>
 
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Advertisement styles only */
     .ad-unit {
       width: 100%;
       margin: 25px auto;
@@ -35,6 +34,12 @@
       align-items: center;
       margin: 10px auto;
       overflow-x: auto;
+      min-height: 0;
+    }
+
+    .ad-wrapper iframe {
+      border: 0;
+      max-width: 100%;
     }
 
     .native-ad {
@@ -70,10 +75,6 @@
 
     .smartlink-button:hover {
       background: #106b49;
-    }
-
-    .ad-wrapper iframe {
-      border: 0;
     }
 
     @media (max-width: 600px) {
@@ -120,23 +121,7 @@
   <!-- AD 1: 728x90 -->
   <div class="ad-unit">
     <span class="ad-label">ADVERTISEMENT</span>
-    <div class="ad-wrapper" id="ad-728x90">
-      <script>
-        (function() {
-          var options = {
-            'key': 'b7c06c94bbb98b8e9ea1f6a76e1367a6',
-            'format': 'iframe',
-            'height': 90,
-            'width': 728,
-            'params': {}
-          };
-          window.atOptions = options;
-          var script = document.createElement('script');
-          script.src = 'https://bicea.org/22/b7c06c94bbb98b8e9ea1f6a76e1367a6';
-          document.currentScript.parentElement.appendChild(script);
-        })();
-      </script>
-    </div>
+    <div class="ad-wrapper" id="ad-728x90"></div>
   </div>
 
   <!-- ARTICLES -->
@@ -153,7 +138,8 @@
       <span class="ad-label">ADVERTISEMENT</span>
 
       <div id="container-c0b646ed56723437822576284fc4cc71"></div>
-      <script async="async" data-cfasync="false"
+
+      <script async data-cfasync="false"
         src="https://bicea.org/21/c0b646ed56723437822576284fc4cc71">
       </script>
     </div>
@@ -161,23 +147,7 @@
     <!-- AD 3: 300x250 -->
     <div class="ad-unit">
       <span class="ad-label">ADVERTISEMENT</span>
-      <div class="ad-wrapper" id="ad-300x250">
-        <script>
-          (function() {
-            var options = {
-              'key': 'c405ce0415adb10d8e5d79edd9748469',
-              'format': 'iframe',
-              'height': 250,
-              'width': 300,
-              'params': {}
-            };
-            window.atOptions = options;
-            var script = document.createElement('script');
-            script.src = 'https://bicea.org/22/c405ce0415adb10d8e5d79edd9748469';
-            document.currentScript.parentElement.appendChild(script);
-          })();
-        </script>
-      </div>
+      <div class="ad-wrapper" id="ad-300x250"></div>
     </div>
 
     <!-- SEARCH -->
@@ -199,49 +169,17 @@
       <p>No articles found.</p>
     </div>
 
-    <!-- AD 4: 160x300 AND AD 5: 160x600 -->
+    <!-- AD 4 AND AD 5 -->
     <div class="banner-row">
 
       <div class="ad-unit">
         <span class="ad-label">ADVERTISEMENT</span>
-        <div class="ad-wrapper" id="ad-160x300">
-          <script>
-            (function() {
-              var options = {
-                'key': '7d353950d51e065ab45b3d283171eac7',
-                'format': 'iframe',
-                'height': 300,
-                'width': 160,
-                'params': {}
-              };
-              window.atOptions = options;
-              var script = document.createElement('script');
-              script.src = 'https://bicea.org/22/7d353950d51e065ab45b3d283171eac7';
-              document.currentScript.parentElement.appendChild(script);
-            })();
-          </script>
-        </div>
+        <div class="ad-wrapper" id="ad-160x300"></div>
       </div>
 
       <div class="ad-unit">
         <span class="ad-label">ADVERTISEMENT</span>
-        <div class="ad-wrapper" id="ad-160x600">
-          <script>
-            (function() {
-              var options = {
-                'key': '92c5ccd256aec973141a367e87abbb4a',
-                'format': 'iframe',
-                'height': 600,
-                'width': 160,
-                'params': {}
-              };
-              window.atOptions = options;
-              var script = document.createElement('script');
-              script.src = 'https://bicea.org/22/92c5ccd256aec973141a367e87abbb4a';
-              document.currentScript.parentElement.appendChild(script);
-            })();
-          </script>
-        </div>
+        <div class="ad-wrapper" id="ad-160x600"></div>
       </div>
 
     </div>
@@ -249,45 +187,13 @@
     <!-- AD 6: 320x50 -->
     <div class="ad-unit">
       <span class="ad-label">ADVERTISEMENT</span>
-      <div class="ad-wrapper" id="ad-320x50">
-        <script>
-          (function() {
-            var options = {
-              'key': 'c7a4fa94d8b097e723df04a22dc68063',
-              'format': 'iframe',
-              'height': 50,
-              'width': 320,
-              'params': {}
-            };
-            window.atOptions = options;
-            var script = document.createElement('script');
-            script.src = 'https://bicea.org/22/c7a4fa94d8b097e723df04a22dc68063';
-            document.currentScript.parentElement.appendChild(script);
-          })();
-        </script>
-      </div>
+      <div class="ad-wrapper" id="ad-320x50"></div>
     </div>
 
     <!-- AD 7: 468x60 -->
     <div class="ad-unit">
       <span class="ad-label">ADVERTISEMENT</span>
-      <div class="ad-wrapper" id="ad-468x60">
-        <script>
-          (function() {
-            var options = {
-              'key': '5f518ca290978628977dced6c8a67260',
-              'format': 'iframe',
-              'height': 60,
-              'width': 468,
-              'params': {}
-            };
-            window.atOptions = options;
-            var script = document.createElement('script');
-            script.src = 'https://bicea.org/22/5f518ca290978628977dced6c8a67260';
-            document.currentScript.parentElement.appendChild(script);
-          })();
-        </script>
-      </div>
+      <div class="ad-wrapper" id="ad-468x60"></div>
     </div>
 
     <!-- AD 8: SMARTLINK -->
@@ -333,9 +239,102 @@
     src="https://bicea.org/14/a337f4bbbd2d9865f427116ffaba0290">
   </script>
 
+  <!-- BANNER ADS: SEQUENTIAL LOADER -->
+  <script>
+  (function () {
+
+    var ads = [
+      {
+        id: "ad-728x90",
+        key: "b7c06c94bbb98b8e9ea1f6a76e1367a6",
+        width: 728,
+        height: 90
+      },
+      {
+        id: "ad-300x250",
+        key: "c405ce0415adb10d8e5d79edd9748469",
+        width: 300,
+        height: 250
+      },
+      {
+        id: "ad-160x300",
+        key: "7d353950d51e065ab45b3d283171eac7",
+        width: 160,
+        height: 300
+      },
+      {
+        id: "ad-160x600",
+        key: "92c5ccd256aec973141a367e87abbb4a",
+        width: 160,
+        height: 600
+      },
+      {
+        id: "ad-320x50",
+        key: "c7a4fa94d8b097e723df04a22dc68063",
+        width: 320,
+        height: 50
+      },
+      {
+        id: "ad-468x60",
+        key: "5f518ca290978628977dced6c8a67260",
+        width: 468,
+        height: 60
+      }
+    ];
+
+    var current = 0;
+
+    function loadNextAd() {
+
+      if (current >= ads.length) {
+        return;
+      }
+
+      var ad = ads[current];
+      current++;
+
+      var container = document.getElementById(ad.id);
+
+      if (!container) {
+        loadNextAd();
+        return;
+      }
+
+      window.atOptions = {
+        key: ad.key,
+        format: "iframe",
+        height: ad.height,
+        width: ad.width,
+        params: {}
+      };
+
+      var script = document.createElement("script");
+
+      script.type = "text/javascript";
+      script.src = "https://bicea.org/22/" + ad.key;
+
+      // Load one banner script at a time.
+      script.onload = function () {
+        loadNextAd();
+      };
+
+      script.onerror = function () {
+        console.error("Ad failed to load:", ad.key);
+        loadNextAd();
+      };
+
+      container.appendChild(script);
+    }
+
+    loadNextAd();
+
+  })();
+  </script>
+
   <!-- WEBSITE JAVASCRIPT -->
   <script src="articles.js"></script>
   <script src="main.js"></script>
 
 </body>
 </html>
+```
